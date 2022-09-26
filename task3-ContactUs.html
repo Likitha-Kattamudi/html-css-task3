@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <script>
+          function clearFunction() {
+            document.getElementsByName("clear").reset();
+         }
+         function getFunction(){
+        
+            var input1=myform.select[myform.select.selectedIndex].text
+            var input2="-PROMO";
+            input2=input1.concat(input2);
+        document.getElementById("promo").value=input2;
+        
+           
+         }
+        function validate(){
+        
+            var Name=document.getElementById("myName").value;
+            var Email=document.getElementById("myEmail").value;
+            var Organization=document.getElementById("myOrganization").value;
+            
+            if (Name=="" || Email=="" || Organization==""){
+               document.getElementById("validationMessage").innerHTML="Please fill all the required fields below"; 
+            }
+         }
+        
+         function getGender(value){
+           let gender=value;
+           
+           if (gender=="Female"){
+            alert("Hello Lady");
+            
+           }
+           else{
+            alert("Hello Sir");
+            
+           }
+         }
+
+        </script>
+        <style>
+        
+            .container1 div , .container2 div,.container3 div{}
+            #header1{
+                flex-basis:100%;
+                margin: 0%;
+                width: 100%;
+                height:85px;
+                color:white;
+                text-align:left;
+                font-size: 40px;
+                font-weight:10;
+                text-transform: uppercase;
+                font-style: arial;
+                padding-left:15px;
+                padding-top:32px;
+                background-color:rgb(8, 170, 214);
+                
+            }
+             .container1 ,.container2 ,.container3{
+                display:flex;   
+            }
+            .container1{
+                margin: 0%;
+            }
+            .container2{
+                background-color:rgb(42, 38, 38);
+            }
+            
+                .header2-1{
+                    flex-basis:6%;
+                    text-transform: uppercase;
+                    color:whitesmoke;
+                    text-align:center;
+                    font-size:12px;
+                    padding:5px;
+                    padding-left:12px;
+                    padding-right:12px;
+
+                }
+                #header2-2{
+                    flex-basis:70%;
+                    color:white;
+                    margin-left:900px;
+                
+                    
+                }
+              
+                .input{
+                    font-size:smaller;
+                    margin:7px;
+                    font-weight: bold;
+                    
+                }  
+                
+                .header2-3{
+                    background-color: orange;
+                    border-left: 3px solid white;
+                }
+                .borderr{
+                    border-bottom:1px solid rgba(0, 0, 0, 0.973);
+                    border-right: 1px solid rgba(0, 0, 0, 0.961);
+                }
+                textarea{
+                    
+        overflow-y: scroll;
+        height: 100px;
+        width: 50%;
+        resize: none;
+        scroll-behavior: smooth; 
+        border-bottom:3px solid rgba(0, 0, 0, 0.973);
+        border-right: 3px solid rgba(0, 0, 0, 0.961);
+        border: 1px solid black;
+              
+    }
+    .validationStyling{
+        color: red;
+        font-weight: bolder;
+    }
+    body{
+        margin:0%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+   .borderr1{
+        
+                    border-top:1px solid rgba(0, 0, 0, 0.973);
+                    border-left: 1px solid rgba(0, 0, 0, 0.961);
+                
+
+    }
+                
+        </style>
+        
+        </head>
+        <body >
+          <div class="container1">
+            <div id="header1" >
+             technovert
+            </div>
+          </div>
+            <div class="container2" >
+                <div class="header2-1">
+                  <b>Home</b>
+                                </div>
+                <div class="header2-1">
+                    <b>Services</b>
+                </div>
+                <div class="header2-1">
+                    <b>Careers</b>
+                 </div>
+                <div class="header2-1 header2-3">
+                    <b>Contact&nbsp;Us</b>
+                </div>
+                <div id="header2-2" >
+                    <img  src="MicrosoftTeams-image.png" width="20px" height="20px" style="padding-top:2px;" />
+                </div>    
+            </div>
+            <div >
+                
+             <div >
+                
+                <form name="myform" >
+
+                    <table style="margin:35px; ">
+                        <tr>
+                            <td colspan="2"><b id="validationMessage" class="validationStyling"></b></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Name:</p></td>
+                            <td><p class="input"><input type="text" id="myName" class="borderr" /><span style="color:red">*</span></p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Email Address:</p></td>
+                            <td><p class="input"><input type="text" class="borderr" id="myEmail" /><span style="color:red">*</span></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Telephone Number:</p></td>
+                            <td><p class="input"><input type="text" class="borderr"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Organization Name:</p></td>
+                            <td><p class="input"><input type="text" class="borderr" id="myOrganization"/><span style="color:red">*</span></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My City:</p></td>
+                            <td><p class="input"><input type="text" class="borderr"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My State or Province:</p></td>
+                            <td><p class="input"><select class="borderr" name="select" onchange="getFunction()" >
+                               <option>Select State or Province:</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="TamilNadu">TamilNadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Odisha">Odisha</option>
+                            </select>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">Gender:</p></td>
+                            
+                            <td><p class="input"><input type="radio" name="Gender" value="Female" oninput="getGender(value)"/>Female</p></td>
+                        </tr>
+                        <tr>
+                           <td></td>
+                            <td><p class="input"><input type="radio" name="Gender" value="Male" oninput="getGender(value)"/>Male</p></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td>
+                            <td><p class="input"><input type="radio" name="mode"/>Email</p></td>
+                        </tr>
+                        <tr>
+
+                        <td><p class="input">Please Contact Me By:</p></td>
+                        <td><p class="input"><input type="radio" name="mode"/>Phone</p></td>
+                    </tr>
+                       <tr>
+                        <td><p></p></td>
+                        <td><p class="input"><input type="radio" name="mode"/>Both</p></td>
+                    </tr>
+                       
+                    <tr>
+                        <td><p class="input" >Promotion Code:</p></td>
+                        <td><p class="input"><input type="text" id="promo" class="borderr"/></p></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p class="input">Optional Information </p>
+                      
+                        </td>
+                    </tr>    
+                        <tr>
+                        <td colspan="2"><i>This information is not required but it helps to serve better</i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p class="input">My Website Address is:</p></td>
+                            <td><p class="input"><input type="text" class="borderr" /></p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p class="input">Tell Us More About Your Organisation:</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea rows="15" columns="500"></textarea></td>
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="2"><p class="input">What I'd really like to know is:</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea rows="15" columns="500"></textarea></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><br><input type="button" value="Send Message" onclick="validate()" class="borderr1">&nbsp;<button class="borderr1" name="clear" onclick="clearFunction()">Clear Form</button></td>
+                        
+                    
+                            </tr>
+                   
+                    </table>
+                </form>
+             </div> 
+            </div>
+         
+
+        </body>
+</html>
