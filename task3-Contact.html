@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styleOfContactPage.css">
+        <script type="text/javascript" src="scripting.js"></script>
+    </head>
+        <body >
+          <div class="container1">
+            <div id="header1" >
+             technovert
+            </div>
+          </div>
+          <div class="container2">
+            <div class="hoverOnDivision">
+              <b class="button header">Home</b>
+                            </div>
+            
+            <div class="hoverOnDivision">
+                <b class="button header">Services</b>
+            </div>
+            <div class="hoverOnDivision">
+                <a href="task3-Careers.html" class="button header">Careers</a>
+            </div>
+            <div class="header2-1 header2-3">
+                <b>Contact</b>
+             </div>
+            <div id="header2-2" >
+                <img  src="MicrosoftTeams-image.png" width="20px" height="20px" style="padding-top:2px;" />
+            </div>    
+        </div>
+            <div >
+                
+             <div >
+                
+                <form name="myform" >
+
+                    <table style="margin:35px; ">
+                        <tr>
+                            <td colspan="2"><b id="validationMessage" class="validationStyling"></b></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Name:</p></td>
+                            <td><p class="input" ><span style="color:red">*</span><input type="text" id="myName" class="borderr" /><label>   </label><label id="labelText1" style="color:red;visibility:hidden;">Name is required</label></p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Email Address:</p></td>
+                            <td><p class="input"><span style="color:red">*</span><input type="text" class="borderr" id="myEmail" /><label>   </label><label id="labelText2" style="color:red;visibility:hidden;">Enter valid Email</label></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Telephone Number:</p></td>
+                            <td><p class="input"><p class="input"><span style="color:white">*</span><input type="text" class="borderr"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My Organization Name:</p></td>
+                            <td><p class="input"><span style="color:red">*</span><input type="text" class="borderr" id="myOrganization"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My City:</p></td>
+                            <td><p class="input"><p class="input"><span style="color:white">*</span><input type="text" class="borderr"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">My State or Province:</p></td>
+                            <td><p class="input"><p class="input"><span style="color:white">*</span><select class="borderr" name="select" onchange="getPromoCode()" >
+                               <option>Select State or Province:</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="TamilNadu">TamilNadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Odisha">Odisha</option>
+                            </select>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="input">Gender:</p></td>
+                            
+                            <td><p class="input"><input type="radio" name="Gender" value="Female" onchange="genderChange(value)"/>Female</p></td>
+                        </tr>
+                        <tr>
+                           <td></td>
+                            <td><p class="input"><input type="radio" name="Gender" value="Male" onchange="genderChange(value)"/>Male</p></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td>
+                            <td><p class="input"><input type="radio" name="mode"/>Email</p></td>
+                        </tr>
+                        <tr>
+
+                        <td><p class="input">Please Contact Me By:</p></td>
+                        <td><p class="input"><input type="radio" name="mode"/>Phone</p></td>
+                    </tr>
+                       <tr>
+                        <td><p></p></td>
+                        <td><p class="input"><input type="radio" name="mode"/>Both</p></td>
+                    </tr>
+                       
+                    <tr>
+                        <td><p class="input" >Promotion Code:</p></td>
+                        <td><p class="input"><input type="text" id="promo" class="borderr"/></p></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p class="input">Optional Information </p>
+                      
+                        </td>
+                    </tr>    
+                        <tr>
+                        <td colspan="2"><i>This information is not required but it helps to serve better</i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p class="input">My Website Address is:</p></td>
+                            <td><p class="input"><input type="text" class="borderr" /></p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p class="input">Tell Us More About Your Organisation:</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea rows="15" columns="500"></textarea></td>
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="2"><p class="input">What I'd really like to know is:</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea rows="15" columns="500"></textarea></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><br><input type="button" value="Send Message" onclick="validate()" class="borderr1">&nbsp;<button class="borderr1" name="clear" onclick="clearForm()">Clear Form</button></td>
+                        
+                    
+                            </tr>
+                   
+                    </table>
+                </form>
+             </div> 
+            </div>
+         
+
+        </body>
+</html>
